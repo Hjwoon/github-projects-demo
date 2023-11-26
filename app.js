@@ -1,5 +1,3 @@
-// app.js
-module.exports = server;
 const express = require('express');
 const app = express();
 const http = require('http').Server(app);
@@ -25,8 +23,10 @@ app.get('/', (req, res) => {
     </body>
     </html>
   `);
-} );
+});
 
 http.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+module.exports = http;
